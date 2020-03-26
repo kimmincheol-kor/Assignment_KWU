@@ -1,0 +1,7 @@
+﻿  BpTree.cc
+c:\users\zetec_000\documents\visual studio 2015\projects\ds_project2\ds_project2\studentdata.h(41): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\zetec_000\documents\visual studio 2015\projects\ds_project2\ds_project2\bptree.cc(70): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\zetec_000\documents\visual studio 2015\projects\ds_project2\ds_project2\bptree.cc(120): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\zetec_000\documents\visual studio 2015\projects\ds_project2\ds_project2\bptree.cc(180): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\zetec_000\documents\visual studio 2015\projects\ds_project2\ds_project2\bptree.cc(188): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  ds_project2.vcxproj -> C:\Users\zetec_000\documents\visual studio 2015\Projects\ds_project2\Debug\ds_project2.exe

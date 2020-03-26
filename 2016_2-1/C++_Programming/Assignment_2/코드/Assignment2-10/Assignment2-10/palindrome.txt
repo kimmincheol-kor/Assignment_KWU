@@ -1,0 +1,1 @@
+Given a bob application area for which we want to design an embedded system, we must determine radar spcific goals for deified the project and estimate dad their feasibility.

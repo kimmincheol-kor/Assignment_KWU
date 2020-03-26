@@ -1,0 +1,316 @@
+<html>
+<head>
+	<title>김민철_아스날홈페이지</title>
+	<!-- 초기화 --!>
+	<style>
+		* {
+		margin: 0; padding 0;
+		font-family: '맑은 고딕', Malgun Gothic, Gothic, sans-serit;
+		}
+		a { text-decoration: none; color: black; }
+		li { list-style: none; }
+	</style>
+	<!-- 기본 클래스 --!>
+	<style>
+		.pull-left { float: left; }
+		.pull-right { float: right; }
+	</style>
+	<!-- 페이지(외부배경, 내부배경)--!>
+	<style>
+		body {
+		width: 960px; margin: 0 auto;
+		background: #B00707;
+		}
+
+		#page-wrapper {
+		background: #020B46;
+		margin: 40px 0; padding: 10px 20px;
+		border-radius: 5px;
+		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+		}
+	</style>
+	<!-- 헤더글자 --!>
+	<style>
+		#main-header { padding: 40px 50px; background : URL(img/arsenal.jpg) no-repeat center }
+
+		.master-title {
+		font-size: 50px;
+		color: black;
+		}
+
+		.master-description {
+		font-size: 20px; font-weight: 500;
+		color: red;
+		}
+	</style>
+	<!--네비게이션(플다운 메뉴 및 라인선 구성하기)--!>
+	<style>
+		#main-navigation {
+		border-top: 1px solid #C8C8C8;
+		border-bottom: 1px solid #C8C8C8;
+		margin-bottom: 20px;
+		height: 40px;
+		}
+
+		.outer-menu-item {
+		float: left;
+		position: relative;
+		color: white;
+		}
+		.outer-menu-item:hover {
+		background: black;
+		color: red;
+		}
+		
+		.menu-title {
+		display: block;
+		height: 30px; line-height: 30px;
+		text-align: center;
+		padding: 5px 20px;
+		}
+
+		.inner-menu {
+		display: none;
+		position: absolute;
+		top: 40px; left: 0;
+		width: 100%;
+
+		background: #020B46;
+		box-shadow: 0 2px 6px rgba(5,5,5,0.9);
+		z-index: 1000;
+
+		text-align: center;
+		}
+
+		.inner-menu-item > a {
+		display: block;
+		padding: 5px 10px;
+		color: white;
+		margin-left: -40px;
+		}
+
+		.inner-menu-item > a:hover {
+		blackground: black;
+		color: white;
+		}
+	</style>
+	<!--검색 양식 추가하기(네비게이션 내부의 검색)--!>
+	<style>
+		.search-bar {
+		height: 26px;
+		padding: 7px;
+		}
+		.input-search {
+		display: block;
+		float: left;
+		background-color: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		border-radius: 15px 0 0 15px;
+		box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.05);
+
+		width: 150px; height: 24px;
+		padding: 0 0 0 10px;
+		font-size: 12px;
+		color: #555555;
+		margin-left: 250px;
+		}
+
+		.input-search:focus {
+		border-color: rgba(82,168,236,0.8);
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+		}
+		.input-search-submit {
+		display: block;
+		float: left;
+		width: 50px; height: 26px;
+		border-radius: 0 15px 15px 0;
+		border: 1px solid #CCCCCC;
+
+		margin-left: -1px;
+		
+		vertical-align: top;
+		display: inline-block;
+		}
+	</style>
+	<!--본문 추가하기 중앙 내용 --!>
+	<style>
+		/* body 태그의 너비: 960 픽셀 */
+		/* #page-wrapper 태그의 padding 속성으로 내용을 너비는 920 픽셀 */
+		#content { overflow : hidden; }
+		#main-section {
+		float: left;
+		width: 710px;
+		}
+		#main-aside {
+		float: right;
+		width: 200px;
+		}
+	</style>
+	<!--본문 추가하기 (좌측 내용물)--!>
+	<style>
+		article {
+		padding : 0 10px 20px 10px;
+		border-bottom: 1px solid #C8C8C8;
+		}
+
+		.article-header { padding: 20px 0; }
+		.article-title {
+		font-size: 25px;
+		font-weight: 500;
+		padding-bottom: 10px;
+		color: white;
+		}
+
+		.article-name { font-size: 13px; color: red;}
+		.article-body {
+		font-size: 14px;
+		color: white;
+		}
+	</style>
+	<!--본문 추가하기(우측 구성)--!>
+	<style>
+		.aside-list { padding: 10px 0 30px 0; }
+		.aside-list > h3 {
+		font-size: 15px;
+		font-weight: 600;
+		color: white;
+		}
+		.aside-list li a {
+		margin-left: 20px;
+		font-size: 13px;
+		color: #6C6C6C;
+		}
+		.aside-list li{
+		margin-left: -60px;
+		font-size: 13px;
+		color: #6C6C6C;
+		}
+	</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$('.outer-menu-item').hover(function(){
+$(this).find('.inner-menu').show();
+}, function(){
+$(this).find('.inner-menu').hide();
+});
+});
+</script>
+</head>
+<body>
+	<div id="page-wrapper">
+		<header id="main-header">
+			<hgroup>
+			<h1 class="master-title"><a href="main.html">아 스 날</a></h1>
+			<h2 class="master-description">Arsenal</h2>
+			</hgroup>
+		</header>
+	<nav id="main-navigation">
+		<div class="pull-left">
+			<ul class="outer-menu">
+				<li class="outer-menu-item">
+					<span class="menu-title">아스날</span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="아스날/역사.html" target="mainframe">아스날의역사</a></li>
+			 <li class="inner-menu-item"><a href="아스날/유니폼.html" target="mainframe">유니폼</a></li>
+			 <li class="inner-menu-item"><a href="아스날/홈구장.html" target="mainframe">홈구장</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title">선수단</span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="http://www.arsenal.com/first-team/players" target="mainframe">1군 선수단</a></li>
+			 <li class="inner-menu-item"><a href="선수단/감독.html" target="mainframe">감독</a></li>
+			 <li class="inner-menu-item"><a href="선수단/레전드.html" target="mainframe">전설</a></li>
+			 <li class="inner-menu-item"><a href="선수단/유망주.html" target="mainframe">유망주</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title">선수 소개</span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="선수/외질.html" target="mainframe">메수트 외질</a></li>
+			 <li class="inner-menu-item"><a href="선수/산체스.html" target="mainframe">알렉시스 산체스</a></li>
+			 <li class="inner-menu-item"><a href="선수/지루.html" target="mainframe">올리비에 지루</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title">나의 아스날</span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="팬활동/피파3.html" target="mainframe">피파온라인3</a></li>
+			 <li class="inner-menu-item"><a href="팬활동/풋볼데이.html" target="mainframe">풋볼데이</a></li>
+			 <li class="inner-menu-item"><a href="팬활동/fm.html" target="mainframe">풋볼매니저</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="search-bar">
+			<form>
+	<input type="text" class="input-search" />
+	<input type="submit" class="input-search-submit" value="검색" />
+			</form>
+		</div>
+	</nav>
+	<div id="content">
+		<section id="main-section">
+			<article>
+				<div class="article-body">
+					<iframe src="https://www.youtube.com/embed/OXRaUNEoJKQ" name="mainframe" width="680" height="700"> </iframe>
+				</div>
+			</article>
+			
+			<article>
+				<div class="article-header">
+					<h1 class="article-title"></h1>
+					<p class="article-name">2015-16 1군 선수단</p>
+				</div>
+				<div class="article-body">
+					<img src="img/first-team.jpg" width="680">
+					<p></p>
+				</div>
+			</article>
+		</section>
+		<aside id="main-aside">
+			<div class="aside-list">
+				<h3>● 링크</h3>
+				<ul>
+					<li><a href="http://www.premierleague.com/" target="mainframe">프리미어리그</a></li>
+					<li><a href="http://www.arsenal.com/" target="mainframe">아스날</a></li>
+					<li><a href="http://fifaonline3.nexon.com/" target="mainframe">피파온라인3</a></li>
+					<li><a href="http://fd.naver.com/" target="mainframe">풋볼데이</a></li>
+					<li><a href="http://sports.news.naver.com/" target="mainframe">네이버스포츠</a></li>
+				</ul>
+			</div>
+			<div class="aside-list">
+				<h3>● 핫한 글</h3>
+				<ul>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=139&article_id=0002045966" target="mainframe">이브라히모비치 "EPL 진출?...</a></li>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=436&article_id=0000019207" target="mainframe">'와인' 같은 남자, 즐라탄이 특별...</a></li>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=450&article_id=0000018047" target="mainframe">'자신만만' AC밀란, 즐라탄 복귀...</a></li>
+				</ul>
+			</div>
+			<div class="aside-list">
+				<h3>● 아스날 동영상</h3>
+				<ul>
+					<br>
+					<li><embed width="300" src="https://www.youtube.com/embed/wCjn6czRmsI"></li>
+					<li><a href="https://www.youtube.com/embed/wCjn6czRmsI" target="mainframe">크게보기</a></li>
+				</ul>
+			</div>
+
+			<div class="aside-list">
+				<h3>● 게임</h3> <br>
+				<ul>
+					<li><a href="game/cube.swf" target="mainframe">뮤직큐브</a></li>
+					<li><a href="game/마리오.swf" target="mainframe">마리오게임</a></li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main-footer">
+		<a href="#"><img src=img/TOP.png width=50></a>
+	</footer> 	
+	</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+#include <stdio.h> // 헤더 파일 선언
+#include <stdlib.h> // 헤더 파일 선언
+#include <string.h> // 헤더 파일 선언
+
+typedef struct person // 구조체 선언
+{
+   char Name[20]; // 이름
+   char Tel[20]; // 전화 번호
+   char Email[20]; // 이메일
+   struct person *Next; // 구조체 포인터 
+}Person;// struct person과 동일
+ // Person형 포인터 Head와 Tail 선언 및 NULL초기화
+
+void Insert(Person *Head, Person *Tail); // Insert 함수 선언
+void Delete(Person *Head, Person *Tail); // Delete 함수 선언
+void Search(Person *Head); // Search 함수 선언
+void PrintAll(Person *Head); // PrintAll 함수 선언
+void Save(Person *Head); // Save 함수 선언
+
+int main() // main 함수의 시작
+{
+   int num=0; // 변수 num 선언 및 0으로 초기화
+
+   Person *Head=NULL, *Tail=NULL;
+   while(1) // 무한 반복문 while
+   {
+      printf("--Telephone Book Menu--\n"); /* 메뉴 문자열 출력*/
+      printf("1. Insert\n");
+      printf("2. Delete\n");
+      printf("3. Search\n");
+      printf("4. Print All\n");
+      printf("5. Save\n");
+      printf("6. Exit\n");
+      printf("Choose the item : "); scanf("%d", &num); // 메뉴 번호 선택
+      switch(num) // 메뉴 번호에 따른 함수호출을 위한 switch문
+      {
+      case 1: // num=1 일때
+         Insert(Head, Tail); // Insert함수 호출
+         break; // switch문 탈출
+      case 2: // num=2 일때
+         printf("[DELETE]\n"); // 문자열 출력
+         printf("Input Name to Delete: "); // 문자열 출력
+         Delete(Head, Tail); // Delete함수 호출
+         break; // switch문 탈출
+      case 3: // num=3 일때
+         Search(Head); // Search함수 호출
+         break; // switch문 탈출
+      case 4: // num=4 일때
+         printf("[Print ALL Data]\n"); // 문자열 출력
+         printf("%3s %6s %10s %18s","Num.", "Name", "Tel", "Email\n"); // 문자열 출력
+         printf("----------------------------------------------------\n"); // 문자열 출력
+         PrintAll(Head); // PrintAll함수 호출
+         break; // switch문 탈출
+      case 5: // num=5 일때
+         Save(Head); // Save함수 호출
+         break; // switch문 탈출
+      case 6: // num=6 일때
+         printf("Exit\n"); // 문자열 출력
+         exit(0); // main 함수 종료
+      default: // num이 1~6이 아닐 때
+         printf("Not in Menu\n"); // 문자열 출력
+         break; // switch문 탈출
+      }
+      printf("\n"); // 개행 출력
+   }
+}
+
+void Insert(Person *Head, Person *Tail) // Insert 함수
+{
+   Person *Ptr = (Person *)malloc(sizeof(Person)); // Person 구조체 포인터 Ptr 선언 및 Head로 초기화
+   printf("[INSERT]\n"); //Person *Ptr = Head; // Person 구조체 포인터 Ptr 선언 및 Head로 초기화 문자열 출력
+   printf("Input Name: "); scanf("%s",Ptr->Name); // 문자열 출력 및 이름입력
+   printf("Input Tel.Number: "); scanf("%s",Ptr->Tel); // 문자열 출력 및 번호입력
+   printf("Input Email Address: "); scanf("%s",Ptr->Email); // 문자열 출력 및 이메일 입력
+   Ptr->Next= NULL; // Ptr의 다음을 가리키는 포인터 Next를 NULL로 초기화
+   if(Head==NULL) // Head가 NULL일 때
+      Head = Tail = Ptr; // Head=Tail=Ptr형태로 초기화
+   else // Head가 NULL이 아닐 때
+   {
+      Tail->Next=Ptr; // Tail->Next를 Ptr로 초기화
+
+      Tail=Ptr; // Tail에 새로운 함수Ptr을 초기화
+   }
+}
+
+void Delete(Person *Head, Person *Tail) // Delete 함수
+{
+   Person *Ptr = Head, *Tmp; // Person 구조체 포인터 Ptr 선언 및 Head로 초기화
+   char name[20]; // 이름을 받는 배열
+   scanf("%s",name); // 이름 입력
+   while(Ptr) // Ptr=NULL전까지 반복
+   {
+      if(!strcmp(name,Ptr->Name)) // strcmp가 0일 때
+      {
+         if(Ptr==Head) // Ptr이 Head일 때
+         {
+            Head = Ptr->Next; // Head에 Head->Next를 초기화
+            free(Ptr); // 메모리 해제
+         }
+         else if(Ptr==Tail) // Ptr이 Tail일 때
+         {   
+            Tail=Tmp; // Tail에 그 전 구조체를 초기화
+            Tail->Next=NULL; // Tail의 다음 구초체를 NULL로 초기화
+            free(Ptr); // Ptr 메모리 해제
+         }
+         else // 중간의 정보를 지울 때
+         {
+            Tmp->Next=Ptr->Next; // 전 Ptr의 다음에 현재 Ptr의 다음을 초기화
+            free(Ptr); // 메모리 해제
+         }
+         break; // if문 탈출
+      }
+      Tmp=Ptr; // Tmp에 Ptr을 초기화
+      Ptr=Ptr->Next; // 다음 정보를 가리킬수 있도록 초기화
+   }
+   printf("Data for Name \"%s\" is deleted\n", name); // 문자열 출력
+}
+
+void Search(Person *Head) // Search 함수
+{
+   Person *Ptr = Head; // Person 구조체 포인터 Ptr 선언 및 Head로 초기화
+   int cnt=1; // 변수 선언 및 초기화
+   char name[20]; // 검색할 이름의 배열
+   printf("[Search]\n"); // 문자열 출력
+   printf("Name : "); // 문자열 출력
+   scanf("%s",name); // 이름을 받음
+   printf("%3s %6s %10s %18s","Num.", "Name", "Tel", "Email\n"); // 문자열 출력
+   printf("----------------------------------------------------\n"); // 문자열 출력
+   while(Ptr) // Ptr=NULL전까지 반복
+   {
+      if(!strcmp(name,Ptr->Name)) // strcmp가 0을 반환할 때
+         printf("[%-1d] %6s %21s %-10s\n",cnt++,Ptr->Name,Ptr->Tel,Ptr->Email); // 문자열 출력
+      Ptr = Ptr->Next; // 다음 사람의 정보를 불러옴
+   }
+   if(cnt==1) // 반복문이 돌아가지 않았을 때
+      printf("Error\n"); // 문자열 출력
+}
+
+void PrintAll(Person *Head) // PrintAll 함수
+{
+   Person *Ptr = Head; // Person 구조체 포인터 Ptr 선언 및 Head로 초기화
+   int cnt=1; // 변수 선언 및 초기화
+   while(Ptr) // Ptr=NULL 전까지 반복
+   {
+      printf("[%-1d] %6s %21s %-10s\n",cnt++,Ptr->Name,Ptr->Tel,Ptr->Email); // 문자열 출력
+      Ptr = Ptr->Next; // 다음 사람의 정보를 불러옴
+   }
+}
+
+void Save(Person *Head) // Save 함수
+{
+   Person *Ptr = Head; // Person 구조체 포인터 Ptr 선언 및 Head로 초기화
+   FILE *Fp; // 파일 Fp선언
+   int cnt=1; // cnt 변수 선언 및 초기화 
+   char name[20]; // 파일의 이름을 받아올 배열
+   printf("[Save to File]\n"); // 문자열 출력
+   printf("File Name : "); // 문자열 출력
+   scanf("%s",name); // 파일 이름 받기
+   Fp = fopen(name,"wt"); // 파일 open
+   while(Ptr) // Ptr=NULL전까지 반복문
+   {
+      fprintf(Fp,"[%-1d] %6s %21s %-10s\n",cnt++,Ptr->Name,Ptr->Tel,Ptr->Email); // 파일에 출력
+      Ptr = Ptr->Next; // 다음 사람의 정보를 불러옴
+   }
+   printf("Telephone Book \"%s\" is saved\n",name); // 문자열 출력
+   fclose(Fp); // 파일 close
+}

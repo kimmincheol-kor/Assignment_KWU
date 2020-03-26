@@ -1,0 +1,143 @@
+>> Program Start <<
+======== LOAD= ========
+Success
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 김하나
+3287 김하나 4 2.67
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 박현우
+2132 박현우 2 4.33
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 윤이나
+8590 윤이나 3 4.33
+=======================
+
+======== RANK =======
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+8590 윤이나 3 4.33
+Computer Architecture : A+
+System Programming : A0
+Operating System : A+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+=======================
+
+======== SEARCH =======
+SEARCH_BP 3 4.5 1
+1241 정지은 1 4.5
+2354 한서연 1 3.33
+4375 박진주 1 2.83
+=======================
+
+>> EXIT <<
+
+>> Program Start <<
+======== LOAD= ========
+Success
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 김하나
+3287 김하나 4 2.67
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 박현우
+2132 박현우 2 4.33
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 윤이나
+8590 윤이나 3 4.33
+=======================
+
+======== RANK =======
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+8590 윤이나 3 4.33
+Computer Architecture : A+
+System Programming : A0
+Operating System : A+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+=======================
+
+======== SEARCH =======
+SEARCH_BP 2.83 4.5 1
+1241 정지은 1 4.5
+2354 한서연 1 3.33
+4375 박진주 1 2.83
+=======================
+
+>> EXIT <<
+
+
+>> Program Start <<
+======== LOAD= ========
+Success
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 김하나
+3287 김하나 4 2.67
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 박현우
+2132 박현우 2 4.33
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 윤이나
+8590 윤이나 3 4.33
+=======================
+
+======== RANK =======
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+8590 윤이나 3 4.33
+Computer Architecture : A+
+System Programming : A0
+Operating System : A+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+=======================
+
+======== SEARCH =======
+SEARCH_BP 2.83 4.5 1
+1241 정지은 1 4.5
+2354 한서연 1 3.33
+4375 박진주 1 2.83
+=======================
+
+>> EXIT <<
+
+

@@ -1,0 +1,4 @@
+1 6 aa ff 
+2 5 bb ee 
+3 4 cc dd 
+zz 

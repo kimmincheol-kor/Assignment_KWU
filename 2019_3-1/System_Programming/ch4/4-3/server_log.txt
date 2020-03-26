@@ -1,0 +1,152 @@
+[Fri Jun 14 19:55:45 2019] Server is started.
+[Fri Jun 14 19:55:45 2019] 11913 process is forked.
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 1
+[Fri Jun 14 19:55:45 2019] 11915 process is forked.
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 2
+[Fri Jun 14 19:55:45 2019] 11917 process is forked.
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 3
+[Fri Jun 14 19:55:45 2019] 11919 process is forked.
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 4
+[Fri Jun 14 19:55:45 2019] 11921 process is forked.
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Fri Jun 14 19:55:45 2019
+URL : /
+IP : 127.0.0.1
+Port : 1689
+PID : 11913
+====================================================
+
+[Fri Jun 14 19:55:45 2019] idleProcessCount : 4
+
+==================== New Client ====================
+TIME : Fri Jun 14 19:55:47 2019
+URL : /accessible.usr
+IP : 127.0.0.1
+Port : 2201
+PID : 11915
+====================================================
+
+[Fri Jun 14 19:55:47 2019] idleProcessCount : 3
+[Fri Jun 14 19:55:47 2019] 11930 process is forked.
+[Fri Jun 14 19:55:47 2019] idleProcessCount : 4
+[Fri Jun 14 19:55:47 2019] 11932 process is forked.
+[Fri Jun 14 19:55:47 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Fri Jun 14 19:55:49 2019
+URL : /html_ls.h
+IP : 127.0.0.1
+Port : 7833
+PID : 11917
+====================================================
+
+[Fri Jun 14 19:55:49 2019] idleProcessCount : 4
+
+================ Disconnected Client ===============
+TIME : Fri Jun 14 19:55:51 2019
+URL : /
+IP : 127.0.0.1
+Port : 1689
+PID : 11913
+CONNECTING TIME : 566835(us)
+====================================================
+
+[Fri Jun 14 19:55:51 2019] idleProcessCount : 5
+
+================ Disconnected Client ===============
+TIME : Fri Jun 14 19:55:53 2019
+URL : /accessible.usr
+IP : 127.0.0.1
+Port : 2201
+PID : 11915
+CONNECTING TIME : 191895(us)
+====================================================
+
+[Fri Jun 14 19:55:53 2019] idleProcessCount : 6
+
+================ Disconnected Client ===============
+TIME : Fri Jun 14 19:55:54 2019
+URL : /html_ls.h
+IP : 127.0.0.1
+Port : 7833
+PID : 11917
+CONNECTING TIME : 415545(us)
+====================================================
+
+[Fri Jun 14 19:55:54 2019] idleProcessCount : 7
+[Fri Jun 14 19:55:54 2019] 11913 process is teminated
+[Fri Jun 14 19:55:54 2019] idleProcessCount : 6
+[Fri Jun 14 19:55:54 2019] 11915 process is teminated
+[Fri Jun 14 19:55:54 2019] idleProcessCount : 5
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+1	127.0.0.1	11917	7833	Fri Jun 14 19:55:49 2019
+
+2	127.0.0.1	11915	2201	Fri Jun 14 19:55:47 2019
+
+3	127.0.0.1	11913	1689	Fri Jun 14 19:55:45 2019
+
+====================================================
+
+[Fri Jun 14 19:56:53 2019] 11917 process is teminated
+[Fri Jun 14 19:56:53 2019] TotalProcessCount : 4
+[Fri Jun 14 19:56:53 2019] 11919 process is teminated
+[Fri Jun 14 19:56:53 2019] TotalProcessCount : 3
+[Fri Jun 14 19:56:53 2019] 11932 process is teminated
+[Fri Jun 14 19:56:53 2019] TotalProcessCount : 0
+[Fri Jun 14 19:56:53 2019] 11930 process is teminated
+[Fri Jun 14 19:56:53 2019] TotalProcessCount : 1
+[Fri Jun 14 19:56:53 2019] Server is terminated

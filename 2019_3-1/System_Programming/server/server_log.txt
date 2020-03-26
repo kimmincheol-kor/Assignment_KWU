@@ -1,0 +1,160 @@
+[Tue Jun  4 13:21:11 2019] Server is started.
+[Tue Jun  4 13:21:11 2019] 5017 process is forked.
+[Tue Jun  4 13:21:11 2019] idleProcessCount : 1
+[Tue Jun  4 13:21:11 2019] 5019 process is forked.
+[Tue Jun  4 13:21:11 2019] idleProcessCount : 2
+[Tue Jun  4 13:21:11 2019] 5021 process is forked.
+[Tue Jun  4 13:21:11 2019] idleProcessCount : 3
+[Tue Jun  4 13:21:11 2019] 5023 process is forked.
+[Tue Jun  4 13:21:11 2019] idleProcessCount : 4
+[Tue Jun  4 13:21:11 2019] 5025 process is forked.
+[Tue Jun  4 13:21:11 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Tue Jun  4 13:21:12 2019
+URL : /
+IP : 127.0.0.1
+Port : 6804
+PID : 5017
+====================================================
+
+[Tue Jun  4 13:21:12 2019] idleProcessCount : 4
+
+================ Disconnected Client ===============
+TIME : Tue Jun  4 13:21:17 2019
+URL : /
+IP : 127.0.0.1
+Port : 6804
+PID : 5017
+CONNECTING TIME : 32586(us)
+====================================================
+
+[Tue Jun  4 13:21:17 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Tue Jun  4 13:21:19 2019
+URL : /
+IP : 127.0.0.1
+Port : 7316
+PID : 5019
+====================================================
+
+[Tue Jun  4 13:21:19 2019] idleProcessCount : 4
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+2	127.0.0.1	5019	7316	Tue Jun  4 13:21:19 2019
+
+1	127.0.0.1	5017	6804	Tue Jun  4 13:21:12 2019
+
+====================================================
+
+================ Disconnected Client ===============
+TIME : Tue Jun  4 13:21:24 2019
+URL : /
+IP : 127.0.0.1
+Port : 7316
+PID : 5019
+CONNECTING TIME : 70387(us)
+====================================================
+
+[Tue Jun  4 13:21:24 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Tue Jun  4 13:21:27 2019
+URL : /
+IP : 127.0.0.1
+Port : 7828
+PID : 5021
+====================================================
+
+[Tue Jun  4 13:21:27 2019] idleProcessCount : 4
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+3	127.0.0.1	5021	7828	Tue Jun  4 13:21:27 2019
+
+2	127.0.0.1	5019	7316	Tue Jun  4 13:21:19 2019
+
+1	127.0.0.1	5017	6804	Tue Jun  4 13:21:12 2019
+
+====================================================
+
+================ Disconnected Client ===============
+TIME : Tue Jun  4 13:21:32 2019
+URL : /
+IP : 127.0.0.1
+Port : 7828
+PID : 5021
+CONNECTING TIME : 41013(us)
+====================================================
+
+[Tue Jun  4 13:21:32 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Tue Jun  4 13:21:33 2019
+URL : /
+IP : 127.0.0.1
+Port : 8340
+PID : 5023
+====================================================
+
+[Tue Jun  4 13:21:33 2019] idleProcessCount : 4
+
+================ Disconnected Client ===============
+TIME : Tue Jun  4 13:21:38 2019
+URL : /
+IP : 127.0.0.1
+Port : 8340
+PID : 5023
+CONNECTING TIME : 61639(us)
+====================================================
+
+[Tue Jun  4 13:21:38 2019] idleProcessCount : 5
+
+==================== New Client ====================
+TIME : Tue Jun  4 13:21:40 2019
+URL : /
+IP : 127.0.0.1
+Port : 8852
+PID : 5025
+====================================================
+
+[Tue Jun  4 13:21:40 2019] idleProcessCount : 4
+
+================ Connection History ================
+No.	IP		PID	PORT	TIME
+5	127.0.0.1	5025	8852	Tue Jun  4 13:21:40 2019
+
+4	127.0.0.1	5023	8340	Tue Jun  4 13:21:33 2019
+
+3	127.0.0.1	5021	7828	Tue Jun  4 13:21:27 2019
+
+2	127.0.0.1	5019	7316	Tue Jun  4 13:21:19 2019
+
+1	127.0.0.1	5017	6804	Tue Jun  4 13:21:12 2019
+
+====================================================
+
+================ Disconnected Client ===============
+TIME : Tue Jun  4 13:21:45 2019
+URL : /
+IP : 127.0.0.1
+Port : 8852
+PID : 5025
+CONNECTING TIME : 48196(us)
+====================================================
+
+[Tue Jun  4 13:21:45 2019] idleProcessCount : 5
+
+[Tue Jun  4 13:21:49 2019] 5017 process is teminated
+[Tue Jun  4 13:21:49 2019] TotalProcessCount : 4
+[Tue Jun  4 13:21:49 2019] 5019 process is teminated
+[Tue Jun  4 13:21:49 2019] TotalProcessCount : 3
+[Tue Jun  4 13:21:49 2019] 5021 process is teminated
+[Tue Jun  4 13:21:49 2019] TotalProcessCount : 2
+[Tue Jun  4 13:21:49 2019] 5023 process is teminated
+[Tue Jun  4 13:21:49 2019] TotalProcessCount : 1
+[Tue Jun  4 13:21:49 2019] 5025 process is teminated
+[Tue Jun  4 13:21:49 2019] TotalProcessCount : 0
+[Tue Jun  4 13:21:49 2019] Server is terminated

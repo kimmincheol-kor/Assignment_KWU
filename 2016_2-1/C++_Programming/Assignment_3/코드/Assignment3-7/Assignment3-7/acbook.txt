@@ -1,0 +1,6 @@
+income 3200000
+expend 450000
+expend 87000
+expend 62000
+income 100000
+expend 18000

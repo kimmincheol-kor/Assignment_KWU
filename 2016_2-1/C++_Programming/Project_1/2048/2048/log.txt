@@ -1,0 +1,21 @@
+1. Mouse_Right_to_Left
+[result]
+2  0  4  32  
+0  0  32  2  
+0  0  0  0  
+0  0  0  2  
+
+2. Key_Down
+[result]
+0  0  0  0  
+2  0  0  0  
+0  0  4  32  
+2  0  32  4  
+
+3. Key_Right
+[result]
+0  0  0  0  
+0  0  0  2  
+0  2  4  32  
+0  2  32  4  
+

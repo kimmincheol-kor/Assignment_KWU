@@ -1,0 +1,132 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	char arr[10][10];
+	memset(arr, '0', 10 * 10);//Initialization
+	char alpha = 'A';
+	int m = 0, n = 0, check, bin[5], rnum, reg;
+	srand(time(NULL));
+	while (1)
+	{
+		arr[m][n] = alpha;
+		alpha++;
+		if (alpha == 'Z'+1)
+			break;
+		check = 0;//move 가능한곳 체크하는 변수
+		reg = 0;//Regular 가능 여부
+		memset(bin, 0, 5*sizeof(int));
+		if (arr[m - 1][n - 1] == '0'&&m > 0 && n > 0)//arr[0][10]이 arr[1][0]과 같으므로 조건을 추가해준다.
+			check += 1;
+		if (arr[m + 1][n - 1] == '0'&&m < 9 && n > 0)
+			check += 2;
+		if (arr[m - 1][n + 1] == '0'&&m > 0 && n < 9)//제곱수 사용하면 더한값을 2진수로서 복구가 가능하므로 2의 n승사용
+			check += 4;
+		if (arr[m + 1][n + 1] == '0'&&m < 9 && n < 9)
+			check += 8;
+		/*
+		1     2
+		   x
+		4     8
+		*/
+		if (check == 0)//Regular가 불가능할때
+		{
+			if (arr[m][n - 1] == '0'&& n > 0)
+				check += 1;
+			if (arr[m + 1][n] == '0'&& m < 9)
+				check += 2;
+			if (arr[m][n + 1] == '0'&& n < 0)
+				check += 4;
+			if (arr[m - 1][n] == '0'&& m > 0)
+				check += 8;
+			/*
+			   1
+			8  x  2
+			   4
+			*/
+			if (check == 0)//둘다 불가능할때
+			{
+				cout << "The Program Stops!" << endl;
+				return -1;
+			}
+			reg = 1;//Regular가 불가능할때
+		}
+		for (int i = 0; i < 4;i++)//move 가능한곳 검사
+		{
+			if (check % 2 == 1)//check를 2진수로 복구하여 move가능한곳 판별
+			{
+				bin[i] = 1;
+				bin[4] += 1;
+			}
+			check /= 2;
+		}
+		rnum = rand() % bin[4];//move 가능한 곳중에서 난수를 발생시켜 움직임
+		for (int i = 0; i < 4; i++)//난수와 이진수 비교하여 움직임
+		{
+방식 : 이진수를 읽어서 0이면 패스하고 1이면 난수와 비교하여 난수가 0이면 해당위치로 이동
+							    난수가 0이 아니면 난수에 1을 뺀다.
+난수<이진수의 1의 갯수
+			if (bin[i]==0)
+			{
+				continue;
+			}
+			else if (rnum == 0)
+			{
+				if (i == 0)
+				{
+					if (reg == 1)
+					{
+						n--;
+						break;
+					}
+					m--;
+					n--;
+				}
+				else if (i == 1)
+				{
+					if (reg == 1)
+					{
+						m++;
+						break;
+					}
+					m++;
+					n--;
+				}
+				else if (i == 2)
+				{
+					if (reg == 1)
+					{
+						n++;
+						break;
+					}
+					m--;
+					n++;
+				}
+				else if (i == 3)
+				{
+					if (reg == 1)
+					{
+						m--;
+						break;
+					}
+					m++;
+					n++;
+				}
+				break;
+			}
+			else
+				rnum--;
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)//출력
+		{
+			cout << arr[i][j] << '\t';//보기 편하게 칸띄우기
+		}
+		cout << endl << endl;//보기 편하게 2줄 띄우기
+	}
+	return 0;
+}

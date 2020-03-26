@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char num[6];
+	int cnt = 0;
+	while (1)
+	{
+		cout << "Input : ";
+		cin >> num;
+		if (atoi(num) < 1 || atoi(num) > 9999)//입력범위 밖의 입력
+			continue;
+		break;
+	}
+	int len = strlen(num);
+	for (int i = 0; i < len; i++)//불가능 검사
+	{
+		if (num[i]>num[i + 1])
+			cnt++;
+	}
+	if (cnt == len)//불가능시
+	{
+		cout << "Not possible" << endl;
+		return 0;
+	}
+	int i;
+	for (i = 0; i < len; i++)
+	{
+		if (num[len - i] > num[len - i - 1])//검사 후 스왑
+		{
+			int temp = num[len - i];
+			num[len - i] = num[len - i - 1];
+			num[len - i - 1] = temp;
+			break;
+		}
+	}
+	for (int j = len - i + 1; j < len; len--)//스왑후 스왑이후숫자 오름차순
+	{
+		for (int k = j; k < len; k++)
+		{
+			if (num[k]<num[k - 1])
+			{
+				int temp = num[k];
+				num[k] = num[k - 1];
+				num[k - 1] = temp;
+			}
+		}
+	}
+	cout << "Output : " << num << endl;
+	return 0;
+}

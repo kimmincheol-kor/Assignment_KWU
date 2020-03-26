@@ -1,0 +1,254 @@
+>> Program Start <<
+======== LOAD= ========
+Success
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 박현우
+2132 박현우 2 4.33
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 김하나
+3287 김하나 4 2.67
+=======================
+
+======== SEARCH =======
+SEARCH_AVL 김지훈
+1543 김지훈 2 3.83
+=======================
+
+======== RANK =======
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+1543 김지훈 2 3.83
+Advanced Programming : B+
+Digital Logic Circuits : A+
+DataStructure : B+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+=======================
+
+======== SEARCH =======
+SEARCH_BP 2.83 4.5 1
+1241 정지은 1 4.5
+2354 한서연 1 3.33
+4375 박진주 1 2.83
+=======================
+
+======== PRINT =======
+1241 정지은 1 4.5
+C Programming : A+
+Calculus : A+
+Intro To Computer : A+
+
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+8590 윤이나 3 4.33
+Computer Architecture : A+
+System Programming : A0
+Operating System : A+
+
+1111 임성수 4 4
+Capstone Design : A0
+Database : A0
+Image Processing : A0
+
+1543 김지훈 2 3.83
+Advanced Programming : B+
+Digital Logic Circuits : A+
+DataStructure : B+
+
+1702 송현민 2 3.67
+Advanced Programming : B+
+Digital Logic Circuits : A0
+DataStructure : B+
+
+5419 김지우 2 3.5
+Advanced Programming : B+
+Digital Logic Circuits : B+
+DataStructure : B+
+
+7654 이은석 3 3.5
+Computer Architecture : C+
+System Programming : A+
+Operating System : B+
+
+9234 박성훈 2 3.5
+Advanced Programming : B+
+Digital Logic Circuits : A0
+DataStructure : B0
+
+2354 한서연 1 3.33
+C Programming : B+
+Calculus : B+
+Intro To Computer : B0
+
+6542 강소윤 4 3.17
+Capstone Design : B+
+Database : B0
+Image Processing : B0
+
+7485 이동현 3 3
+Computer Architecture : B+
+System Programming : B0
+Operating System : C+
+
+8416 이지민 3 3
+Computer Architecture : A0
+System Programming : C0
+Operating System : B0
+
+4375 박진주 1 2.83
+C Programming : C+
+Calculus : C+
+Intro To Computer : B+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+9821 이슬비 3 2.5
+Computer Architecture : C+
+System Programming : B0
+Operating System : C0
+
+5984 김현주 1 2.17
+C Programming : C0
+Calculus : C0
+Intro To Computer : C+
+
+2311 김세영 4 1.83
+Capstone Design : D+
+Database : C0
+Image Processing : C0
+
+9922 신준영 2 1.5
+Advanced Programming : C+
+Digital Logic Circuits : F
+DataStructure : C0
+
+4873 한지은 1 1.17
+C Programming : C0
+Calculus : D+
+Intro To Computer : F
+
+=======================
+
+======== PRINT =======
+6542 강소윤 4 3.17
+Capstone Design : B+
+Database : B0
+Image Processing : B0
+
+2311 김세영 4 1.83
+Capstone Design : D+
+Database : C0
+Image Processing : C0
+
+5419 김지우 2 3.5
+Advanced Programming : B+
+Digital Logic Circuits : B+
+DataStructure : B+
+
+1543 김지훈 2 3.83
+Advanced Programming : B+
+Digital Logic Circuits : A+
+DataStructure : B+
+
+3287 김하나 4 2.67
+Capstone Design : B0
+Database : B0
+Image Processing : C0
+
+5984 김현주 1 2.17
+C Programming : C0
+Calculus : C0
+Intro To Computer : C+
+
+9234 박성훈 2 3.5
+Advanced Programming : B+
+Digital Logic Circuits : A0
+DataStructure : B0
+
+4375 박진주 1 2.83
+C Programming : C+
+Calculus : C+
+Intro To Computer : B+
+
+2132 박현우 2 4.33
+Advanced Programming : A0
+Digital Logic Circuits : A+
+DataStructure : A+
+
+1702 송현민 2 3.67
+Advanced Programming : B+
+Digital Logic Circuits : A0
+DataStructure : B+
+
+9922 신준영 2 1.5
+Advanced Programming : C+
+Digital Logic Circuits : F
+DataStructure : C0
+
+8590 윤이나 3 4.33
+Computer Architecture : A+
+System Programming : A0
+Operating System : A+
+
+7485 이동현 3 3
+Computer Architecture : B+
+System Programming : B0
+Operating System : C+
+
+9821 이슬비 3 2.5
+Computer Architecture : C+
+System Programming : B0
+Operating System : C0
+
+7654 이은석 3 3.5
+Computer Architecture : C+
+System Programming : A+
+Operating System : B+
+
+8416 이지민 3 3
+Computer Architecture : A0
+System Programming : C0
+Operating System : B0
+
+1111 임성수 4 4
+Capstone Design : A0
+Database : A0
+Image Processing : A0
+
+1241 정지은 1 4.5
+C Programming : A+
+Calculus : A+
+Intro To Computer : A+
+
+2354 한서연 1 3.33
+C Programming : B+
+Calculus : B+
+Intro To Computer : B0
+
+4873 한지은 1 1.17
+C Programming : C0
+Calculus : D+
+Intro To Computer : F
+
+=======================
+
+>> EXIT <<
+
+

@@ -1,0 +1,302 @@
+<html>
+<head>
+	<title>메인화면 만들기</title>
+	<!-- 초기화 --!>
+	<style>
+		* {
+		margin: 0; padding 0;
+		font-family: '맑은 고딕', Malgun Gothic, Gothic, sans-serit;
+		}
+		a { text-decoration: none; color: black; }
+		li { list-style: none; }
+	</style>
+	<!-- 기본 클래스 --!>
+	<style>
+		.pull-left { float: left; }
+		.pull-right { float: right; }
+	</style>
+	<!-- 페이지(외부배경, 내부배경)--!>
+	<style>
+		body {
+		width: 960px; margin: 0 auto;
+		background: skyblue;
+		}
+
+		#page-wrapper {
+		background: #DEFF82;
+		margin: 40px 0; padding: 10px 20px;
+		border-radius: 5px;
+		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+		}
+	</style>
+	<!-- 헤더글자 --!>
+	<style>
+		#main-header { padding: 40px 50px; }
+		.master-title {
+		font-size: 40px;
+		color: #181818;
+		}
+		.master-description {
+		font-size: 25px; font-weight: 500;
+		color: #383838
+		}
+	</style>
+	<!--네비게이션(플다운 메뉴 및 라인선 구성하기)--!>
+	<style>
+		#main-navigation {
+		border-top: 1px solid #C8C8C8;
+		border-bottom: 1px solid #C8C8C8;
+		margin-bottom: 20px;
+		height: 40px;
+		}
+
+		.outer-menu-item {
+		float: left;
+		position: relative;
+		}
+		.outer-menu-item:hover {
+		background: black;
+		color: white;
+		}
+		
+		.menu-title {
+		display: block;
+		height: 30px; line-height: 30px;
+		text-align: center;
+		padding: 5px 20px;
+		}
+
+		.inner-menu {
+		display: none;
+		position: absolute;
+		top: 40px; left: 0;
+		width: 100%;
+
+		background: white;
+		box-shadow: 0 2px 6px rgba(5,5,5,0.9);
+		z-index: 1000;
+
+		text-align: center;
+		}
+
+		.inner-menu-item > a {
+		display: block;
+		padding: 5px 10px;
+		color: black;
+		margin-left: -40px;
+		}
+
+		.inner-menu-item > a:hover {
+		blackground: black;
+		color: white;
+		}
+	</style>
+	<!--검색 양식 추가하기(네비게이션 내부의 검색)--!>
+	<style>
+		.search-bar {
+		height: 26px;
+		padding: 7px;
+		}
+		.input-search {
+		display: block;
+		float: left;
+		background-color: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		border-radius: 15px 0 0 15px;
+		box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.05);
+
+		width: 150px; height: 24px;
+		padding: 0 0 0 10px;
+		font-size: 12px;
+		color: #555555;
+		margin-left: 400px;
+		}
+
+		.input-search:focus {
+		border-color: rgba(82,168,236,0.8);
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+		}
+		.input-search-submit {
+		display: block;
+		float: left;
+		width: 50px; height: 26px;
+		border-radius: 0 15px 15px 0;
+		border: 1px solid #CCCCCC;
+
+		margin-left: -1px;
+		
+		vertical-align: top;
+		display: inline-block;
+		}
+	</style>
+	<!--본문 추가하기 중앙 내용 --!>
+	<style>
+		/* body 태그의 너비: 960 픽셀 */
+		/* #page-wrapper 태그의 padding 속성으로 내용을 너비는 920 픽셀 */
+		#content { overflow : hidden; }
+		#main-section {
+		float: left;
+		width: 710px;
+		}
+		#main-aside {
+		float: right;
+		width: 200px;
+		}
+	</style>
+	<!--본문 추가하기 (좌측 내용물)--!>
+	<style>
+		article {
+		padding : 0 10px 20px 10px;
+		border-bottom: 1px solid #C8C8C8;
+		}
+
+		.article-header { padding: 20px 0; }
+		.article-title {
+		font-size: 25px;
+		font-weight: 500;
+		padding-bottom: 10px;
+		}
+
+		.article-date { font-size: 13px; }
+		.article-body {
+		font-size: 14px;
+		}
+	</style>
+	<!--본문 추가하기(우측 구성)--!>
+	<style>
+		.aside-list { padding: 10px 0 30px 0; }
+		.aside-list > h3 {
+		font-size: 15px;
+		font-weight: 600;
+		}
+		.aside-list li a {
+		margin-left: 20px;
+		font-size: 13px;
+		color: #6C6C6C;
+		}
+		.aside-list li{
+		margin-left: -60px;
+		font-size: 13px;
+		color: #6C6C6C;
+		}
+	</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$('.outer-menu-item').hover(function(){
+$(this).find('.inner-menu').show();
+}, function(){
+$(this).find('.inner-menu').hide();
+});
+});
+</script>
+</head>
+<body>
+	<div id="page-wrapper">
+		<header id="main-header">
+			<hgroup>
+			<h1 class="master-title"><a href="main.html">김민철의 홈페이지</a></h1>
+			<h2 class="master-description">2015722087</h2>
+			</hgroup>
+		</header>
+	<nav id="main-navigation">
+		<div class="pull-left">
+			<ul class="outer-menu">
+				<li class="outer-menu-item">
+					<span class="menu-title">프로필</span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="프로필/kmc.html" target="mainframe">김민철이란?</a></li>
+			 <li class="inner-menu-item"><a href="프로필/역사.htm" target="mainframe">나의 역사</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title"><a href="#">취미</a></span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="취미/게임.html" target="mainframe">게임</a></li>
+			 <li class="inner-menu-item"><a href="취미/독서.html" target="mainframe">독서</a></li>
+			 <li class="inner-menu-item"><a href="취미/감상.html" target="mainframe">감상</a></li>
+					</ul>
+				</li>
+				<li class="outer-menu-item">
+					<span class="menu-title"><a href="#">일기</a></span>
+					<ul class="inner-menu">
+			 <li class="inner-menu-item"><a href="일기/년도별일기 (1).html" target="mainframe">2015년</a></li>
+			 <li class="inner-menu-item"><a href="일기/년도별일기 (2).html" target="mainframe">2014년</a></li>
+			 <li class="inner-menu-item"><a href="일기/년도별일기 (3).html" target="mainframe">2013년</a></li>
+			 <li class="inner-menu-item"><a href="일기/년도별일기 (4).html" target="mainframe">2012년</a></li>
+			 <li class="inner-menu-item"><a href="일기/년도별일기 (5).html" target="mainframe">2011년</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="search-bar">
+			<form>
+	<input type="text" class="input-search" />
+	<input type="submit" class="input-search-submit" value="검색" />
+			</form>
+		</div>
+	</nav>
+	<div id="content">
+		<section id="main-section">
+			<article>
+				<div class="article-body">
+					<iframe src="welcome.htm" name="mainframe" width="650" height="500"> </iframe>
+				</div>
+			</article>
+			
+			<article>
+				<div class="article-header">
+					<h1 class="article-title">고찰</h1>
+					<p class="article-date">2015년 11월 12일</p>
+				</div>
+				<div class="article-body">
+					<img src="img/뿌듯.jpg" width="200">
+					<p>이번 홈페이지 만들기는 너무나도 뿌듯했다.</p>
+				</div>
+			</article>
+		</section>
+		<aside id="main-aside">
+			<div class="aside-list">
+				<h3>링크</h3>
+				<ul>
+					<li><a href="http://sa.nexon.com">서든어택</a></li>
+					<li><a href="http://www.nexon.com">넥슨</a></li>
+					<li><a href="http://www.naver.com">네이버</a></li>
+					<li><a href="http://www.kw.ac.kr">광운대학교</a></li>
+					<li><a href="http://info.kw.ac.kr">유캠퍼스</a></li>
+				</ul>
+			</div>
+			<div class="aside-list">
+				<h3>핫한 글</h3>
+				<ul>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=139&article_id=0002045966" target="mainframe">이브라히모비치 "EPL 진출? 나이가 많지만"</a></li>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=436&article_id=0000019207" target="mainframe">'와인' 같은 남자, 즐라탄이 특별한 이유</a></li>
+					<li><a href="http://sports.news.naver.com/sports/index.nhn?category=worldfootball&ctg=news&mod=read&office_id=450&article_id=0000018047" target="mainframe">'자신만만' AC밀란, '우승 보증수표' 즐라탄 복귀 추진</a></li>
+				</ul>
+			</div>
+			<div class="aside-list">
+				<h3>오늘의 동영상</h3>
+				<ul>
+					<br>
+					<li><embed width="300" src="https://www.youtube.com/embed/1kT_bDnYO2Y"></li>
+					<li><a href="https://www.youtube.com/embed/1kT_bDnYO2Y" target="mainframe">크게보기</a></li>
+				</ul>
+			</div>
+
+			<div class="aside-list">
+				<h3>게임</h3>
+				<ul>
+					<li><a href="game/cube.swf" target="mainframe">뮤직큐브</a></li>
+					<li><a href="game/마리오.swf" target="mainframe">마리오게임</a></li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main-footer">
+		<a href="#">@TOP</a>
+	</footer> 	
+	</div>
+</body>
+</html>

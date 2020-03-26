@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int area(int point1[2], int point2[2], int point3[2]);
+
+int main()
+{
+	int sam[3][2], point[2], S, pS = 0;
+	cout << "Input 3 point to make triangle" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 2; j++)
+		{
+			cin >> sam[i][j];
+		}
+	}
+	S = area(sam[0], sam[1], sam[2]);//주어진 3점으로 만든 삼각형의 넓이의 2배
+	if (S == 0)//삼각형 검사(넓이가 0일시 삼각형이 만들어지지 않는다)
+	{
+		cout << "삼각형이 아닙니다." << endl;
+		return 0;
+	}
+	cout << "Input : ";
+	for (int i = 0; i < 2; i++)
+	{
+		cin >> point[i];
+	}
+	for (int i = 0, j=1; i < 3; i++, j++)
+	{
+		if (j == 3)
+			j = 0;
+		pS += area(sam[i], sam[j], point);//주어진 점과 삼각형의 2점의 넓이의 각각의 합
+	}
+	if (S < pS)//기존 삼각형의 넓이와 3개의 삼각형의 합이 같아야만 한점이 삼각형 내부에 존재한다(혹은 경계선에)
+		cout << "The point is not in the triangle" << endl;
+	else
+		cout << "The point is in the triangle" << endl;
+	return 0;
+}
+
+//삼각형의 넓이의 2배를 반환하는 함수
+int area(int point1[2], int point2[2], int point3[2])
+{//삼각형의 넓이를 구하는 사선공식을 이용했다.
+	int S = (point1[0] * point2[1] + point2[0] * point3[1] + point3[0] * point1[1]) - (point2[0] * point1[1] + point3[0] * point2[1] + point1[0] * point3[1]);
+	if (S < 0)//절대값 처리
+		S = -S;
+	return S;
+}
